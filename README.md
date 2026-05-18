@@ -1,16 +1,66 @@
 # ml_nota_certa
 
-A new Flutter project.
+Aplicativo Flutter para gerenciamento de avaliações escolares, lançamento de respostas, correção e análise de desempenho dos alunos.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## ✨ Funcionalidades
 
-A few resources to get you started if this is your first Flutter project:
+### 📚 Gestão escolar
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Seleção de escolas
+- Seleção de turmas
+- Seleção de avaliações
+- Listagem de alunos
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+### 📝 Lançamento de respostas
+
+- Preenchimento manual das respostas
+- Persistência local offline
+- Salvamento automático por aluno
+- Recuperação das respostas já preenchidas
+- Interface responsiva para celular e tablet
+
+---
+
+### 📊 Dashboard
+
+- Média da turma
+- Maior nota
+- Ranking de alunos
+- Questões com maior índice de erro
+- Progresso da correção
+- Gráficos de desempenho
+
+---
+
+### 💾 Persistência local
+
+Utilizando Hive para:
+
+- Respostas dos alunos
+- Cache local
+- Funcionamento offline
+
+---
+
+### 📄 Exportação
+
+- Exportação de relatórios em PDF
+- Ranking da turma
+- Estatísticas da avaliação
+
+---
+
+## 🏗️ Arquitetura
+
+O projeto utiliza:
+
+- Clean Architecture
+- GetX
+- Modularização por feature
+- Persistência local com Hive
+
+---
