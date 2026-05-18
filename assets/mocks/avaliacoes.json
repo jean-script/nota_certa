@@ -1,0 +1,57 @@
+[
+    {
+        "id": "ava_01",
+        "turma_id": "tur_01",
+        "titulo": "Prova Bimestral - Matemática",
+        "data_aplicacao": "2024-03-15",
+        "total_questoes": 10,
+        "gabarito": [
+            3,
+            2,
+            4,
+            1,
+            5,
+            2,
+            3,
+            4,
+            1,
+            2
+        ]
+    },
+    {
+        "id": "ava_02",
+        "turma_id": "tur_01",
+        "titulo": "Simulado - Português",
+        "data_aplicacao": "2024-04-10",
+        "total_questoes": 8,
+        "gabarito": [
+            2,
+            3,
+            1,
+            4,
+            2,
+            3,
+            1,
+            4
+        ]
+    },
+    {
+        "id": "ava_03",
+        "turma_id": "tur_02",
+        "titulo": "Prova Bimestral - Ciências",
+        "data_aplicacao": "2024-03-20",
+        "total_questoes": 10,
+        "gabarito": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            1,
+            2,
+            3,
+            4,
+            5
+        ]
+    }
+]

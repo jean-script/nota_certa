@@ -1,0 +1,38 @@
+[
+    {
+        "id": "alu_01",
+        "turma_id": "tur_01",
+        "nome": "Ana Beatriz Silva",
+        "matricula": "20240001"
+    },
+    {
+        "id": "alu_02",
+        "turma_id": "tur_01",
+        "nome": "Bruno Henrique Santos",
+        "matricula": "20240002"
+    },
+    {
+        "id": "alu_03",
+        "turma_id": "tur_01",
+        "nome": "Carla Fernandes Lima",
+        "matricula": "20240003"
+    },
+    {
+        "id": "alu_04",
+        "turma_id": "tur_02",
+        "nome": "Daniel Oliveira Costa",
+        "matricula": "20240004"
+    },
+    {
+        "id": "alu_05",
+        "turma_id": "tur_02",
+        "nome": "Eduarda Martins Rocha",
+        "matricula": "20240005"
+    },
+    {
+        "id": "alu_06",
+        "turma_id": "tur_03",
+        "nome": "Fernando Alves Pereira",
+        "matricula": "20240006"
+    }
+]

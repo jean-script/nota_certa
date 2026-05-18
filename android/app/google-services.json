@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "37024419134",
+    "project_id": "flutter-95e6a",
+    "storage_bucket": "flutter-95e6a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37024419134:android:50b13b906cad464da5706f",
+        "android_client_info": {
+          "package_name": "com.dreams.delights"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6oc5AphAoxdYlvBZvGilrb65hW59vYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37024419134:android:aebba4d09fb6b275a5706f",
+        "android_client_info": {
+          "package_name": "com.example.flutter_firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6oc5AphAoxdYlvBZvGilrb65hW59vYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37024419134:android:35de0e87ac51d069a5706f",
+        "android_client_info": {
+          "package_name": "com.example.ml_nota_certa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6oc5AphAoxdYlvBZvGilrb65hW59vYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37024419134:android:115b4ba8bb21ad51a5706f",
+        "android_client_info": {
+          "package_name": "com.example.push_notification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6oc5AphAoxdYlvBZvGilrb65hW59vYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:37024419134:android:0cc1c41a8a5272caa5706f",
+        "android_client_info": {
+          "package_name": "com.example.vm_fiscal_mb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk6oc5AphAoxdYlvBZvGilrb65hW59vYA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

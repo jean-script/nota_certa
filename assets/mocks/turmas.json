@@ -1,0 +1,32 @@
+[
+    {
+        "id": "tur_01",
+        "escola_id": "esc_01",
+        "nome": "5º Ano A",
+        "ano": 2024
+    },
+    {
+        "id": "tur_02",
+        "escola_id": "esc_01",
+        "nome": "5º Ano B",
+        "ano": 2024
+    },
+    {
+        "id": "tur_03",
+        "escola_id": "esc_02",
+        "nome": "6º Ano A",
+        "ano": 2024
+    },
+    {
+        "id": "tur_04",
+        "escola_id": "esc_02",
+        "nome": "6º Ano B",
+        "ano": 2024
+    },
+    {
+        "id": "tur_05",
+        "escola_id": "esc_03",
+        "nome": "7º Ano Único",
+        "ano": 2024
+    }
+]
