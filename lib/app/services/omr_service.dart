@@ -54,7 +54,7 @@ class OMRService {
         }
       }
 
-      answers.add(selected);
+      answers.add(selected + 1);
     }
 
     /// IMAGEM GERADA PARA TESTE...

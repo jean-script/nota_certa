@@ -22,6 +22,7 @@ class StudentSelector extends StatelessWidget {
         return DropdownButtonFormField<String>(
           initialValue: MyCameraController.to.selectedStudentId.value,
 
+          // initialValue: MyCameraController.to.selectedStudentId.value,
           decoration: InputDecoration(
             labelText: 'Selecionar aluno',
             labelStyle: TextStyle(
@@ -46,7 +47,6 @@ class StudentSelector extends StatelessWidget {
               ),
             );
           }).toList(),
-
           onChanged: (value) {
             MyCameraController.to.selectedStudentId.value = value;
           },
