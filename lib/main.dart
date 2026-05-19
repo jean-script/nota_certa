@@ -5,11 +5,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import 'package:ml_nota_certa/app/bindings/school_bindings.dart';
+import 'package:ml_nota_certa/app/modules/camera/domain/entities/scan_dto.dart';
 import 'package:ml_nota_certa/app/modules/school/domain/entities/student_evaluation_answer_hive.dart';
 import 'package:ml_nota_certa/app/pages/fata_error_page.dart';
 import 'package:ml_nota_certa/app/routes/routes.dart';
@@ -36,13 +38,41 @@ void main() async {
       };
     }
 
-    // await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    final dispatcher = WidgetsBinding.instance.platformDispatcher;
+    final size = dispatcher.views.first.physicalSize;
+    final devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+
+    final logicalWidth = size.width / devicePixelRatio;
+    final logicalHeight = size.height / devicePixelRatio;
+
+    final shortestSide = logicalWidth < logicalHeight
+        ? logicalWidth
+        : logicalHeight;
+
+    final isTablet = shortestSide >= 600;
+
+    if (isTablet) {
+      await SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+        // DeviceOrientation.portraitDown,
+        DeviceOrientation.landscapeLeft,
+        DeviceOrientation.landscapeRight,
+      ]);
+    } else {
+      await SystemChrome.setPreferredOrientations([
+        DeviceOrientation.portraitUp,
+      ]);
+    }
 
     await Hive.initFlutter();
 
     Hive.registerAdapter(StudentEvaluationAnswerHiveAdapter());
 
     await Hive.openBox<StudentEvaluationAnswerHive>('student_answers');
+
+    Hive.registerAdapter(ScanDTOAdapter());
+
+    await Hive.openBox<ScanDTO>('scans');
 
     Intl.defaultLocale = 'pt_BR';
 

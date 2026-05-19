@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
-        android:label="ml_nota_certa"
+        android:label="Nota Certa"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

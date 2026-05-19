@@ -13,9 +13,6 @@ class StudentEvaluationAnswerHive extends HiveObject {
   @HiveField(2)
   String evaluationId;
 
-  @HiveField(3)
-  String? imagePath;
-
   @HiveField(4)
   DateTime createdAt;
 
@@ -23,15 +20,14 @@ class StudentEvaluationAnswerHive extends HiveObject {
   double? grade;
 
   @HiveField(6)
-  List<int?>? detectedAnswers;
+  List<int?>? answers;
 
   StudentEvaluationAnswerHive({
     required this.id,
     required this.studentId,
     required this.evaluationId,
-    this.imagePath,
     required this.createdAt,
     this.grade,
-    this.detectedAnswers,
+    this.answers,
   });
 }

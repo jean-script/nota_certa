@@ -68,7 +68,7 @@ class EvaluationController extends GetxController
 
       final localAnswer = await _getStudentAnswer(student.id);
 
-      answers[student.id] = localAnswer?.detectedAnswers ?? _emptyAnswers();
+      answers[student.id] = localAnswer?.answers ?? _emptyAnswers();
 
       AppLogger.log(
         '[LOAD_SAVED_ANSWERS] -> respostas carregadas aluno ${student.name}',
@@ -161,14 +161,13 @@ class EvaluationController extends GetxController
       id: '${evaluationId}_$studentId',
       studentId: studentId,
       evaluationId: evaluationId,
-      imagePath: null,
       createdAt: DateTime.now(),
-      grade: _calculateStudentGrade(studentId),
-      detectedAnswers: answers[studentId],
+      grade: calculateStudentGrade(studentId),
+      answers: answers[studentId],
     );
   }
 
-  double? _calculateStudentGrade(String studentId) {
+  double? calculateStudentGrade(String studentId) {
     final review = SchoolController.to.reviewSelected;
 
     if (review == null) {

@@ -3,9 +3,15 @@ import 'package:get/get.dart';
 import 'package:ml_nota_certa/app/components/loading_widget.dart';
 import 'package:ml_nota_certa/app/components/my_circle_avatar.dart';
 import 'package:ml_nota_certa/app/components/my_scaffold.dart';
+import 'package:ml_nota_certa/app/modules/camera/presenter/controllers/camera_controller.dart';
 import 'package:ml_nota_certa/app/modules/school/domain/entities/studenty_dto.dart';
 import 'package:ml_nota_certa/app/modules/school/presenter/controllers/evaluation_controller.dart';
 import 'package:ml_nota_certa/app/modules/school/presenter/controllers/school_controller.dart';
+import 'package:ml_nota_certa/app/modules/school/presenter/controllers/student_controller.dart';
+import 'package:ml_nota_certa/app/pages/scan_preview_page.dart';
+import 'package:ml_nota_certa/app/pages/student_scan_page.dart';
+import 'package:ml_nota_certa/app/pages/take_answer_sheet_picture_page.dart';
+import 'package:ml_nota_certa/app/routes/routes.dart';
 
 class RegisterResponseStudentPage extends GetView<EvaluationController> {
   const RegisterResponseStudentPage({super.key});
@@ -66,7 +72,20 @@ class RegisterResponseStudentPage extends GetView<EvaluationController> {
                         ),
                         const SizedBox(width: 12),
                         ElevatedButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.toNamed(MyRoutes.CAMERA_PAGE);
+                            // await MyCameraController.to
+                            //     .takeAnswerSheetPicture();
+
+                            // final image =
+                            //     MyCameraController.to.answerSheetImage.value;
+
+                            // if (image == null) {
+                            //   return;
+                            // }
+
+                            // Get.to(() => const ScanAnswerSheetPage());
+                          },
                           icon: const Icon(Icons.document_scanner_outlined),
                           label: const Text('Cartão resposta'),
                           style: ElevatedButton.styleFrom(
@@ -246,10 +265,26 @@ class _StudentAnswersCardState extends State<StudentAnswersCard> {
               style: TextStyle(color: Colors.grey.shade600),
             ),
           ),
-          trailing: Icon(
-            expanded
-                ? Icons.keyboard_arrow_up_rounded
-                : Icons.keyboard_arrow_down_rounded,
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              IconButton(
+                onPressed: () {
+                  Get.lazyPut(
+                    () =>
+                        StudentController(Get.find(), student: widget.student),
+                  );
+                  Get.toNamed(MyRoutes.STUDENT_DETAIL);
+                },
+                icon: const Icon(Icons.history),
+              ),
+
+              Icon(
+                expanded
+                    ? Icons.keyboard_arrow_up_rounded
+                    : Icons.keyboard_arrow_down_rounded,
+              ),
+            ],
           ),
           // Container(
           //   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
