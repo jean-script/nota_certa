@@ -257,4 +257,4 @@ flutter run
 
 # 👨‍💻 Autor
 
-Desenvolvido com Flutter utilizando Clean Architecture e GetX.
+Jean Carlos Aires
